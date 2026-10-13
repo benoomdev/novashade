@@ -1,4 +1,15 @@
 {
+  "Header": {
+    "accueil": "Novashade – accueil",
+    "navigation": "Navigation principale",
+    "services": "Services",
+    "realisations": "Réalisations",
+    "apropos": "À propos",
+    "contact": "Contact",
+    "devis": "Devis gratuit",
+    "ouvrirMenu": "Ouvrir le menu",
+    "fermerMenu": "Fermer le menu"
+  },
   "Test": {
     "titre": "Bonjour, ceci est la version française du site Novashade."
   }

@@ -1,4 +1,15 @@
 {
+  "Header": {
+    "accueil": "Novashade – home",
+    "navigation": "Hoofdnavigatie",
+    "services": "Diensten",
+    "realisations": "Realisaties",
+    "apropos": "Over ons",
+    "contact": "Contact",
+    "devis": "Gratis offerte",
+    "ouvrirMenu": "Menu openen",
+    "fermerMenu": "Menu sluiten"
+  },
   "Test": {
     "titre": "Hallo, dit is de Nederlandstalige versie van de Novashade-website."
   }

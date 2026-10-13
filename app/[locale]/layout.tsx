@@ -3,6 +3,7 @@ import {Jost} from 'next/font/google';
 import {notFound} from 'next/navigation';
 import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import {routing} from '@/i18n/routing';
+import Header from './components/Header';
 import '../globals.css';
 
 const jost = Jost({subsets: ['latin'], display: 'swap', variable: '--font-jost'});
@@ -30,7 +31,10 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html lang={locale} className={jost.variable}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
