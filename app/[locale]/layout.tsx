@@ -5,7 +5,7 @@ import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import {routing} from '@/i18n/routing';
 import '../globals.css';
 
-const jost = Jost({subsets: ['latin'], display: 'swap'});
+const jost = Jost({subsets: ['latin'], display: 'swap', variable: '--font-jost'});
 
 export const metadata: Metadata = {
   title: 'Novashade',
@@ -28,8 +28,8 @@ export default async function LocaleLayout({children, params}: Props) {
   }
 
   return (
-    <html lang={locale}>
-      <body className={jost.className}>
+    <html lang={locale} className={jost.variable}>
+      <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

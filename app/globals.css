@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Palette Novashade */
+@theme {
+  --color-creme: #FAF7F2;
+  --color-anthracite: #2A2925;
+  --color-gris: #67625A;
+  --color-noir: #0B0B0A;
+  --color-or: #E0AE4C;
+  --color-or-fonce: #8A6420;
+  --color-carte: #FFFFFF;
+  --color-bordure: #EAE3D6;
 }
 
+/* Police Jost, chargée dans le layout */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dégradé or : uniquement pour le logo, les grands titres et les filets */
+@utility texte-degrade-or {
+  background-image: linear-gradient(180deg, #F7D88A 0%, #E0AE4C 50%, #B07A2A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility fond-degrade-or {
+  background-image: linear-gradient(180deg, #F7D88A 0%, #E0AE4C 50%, #B07A2A 100%);
+}
+
+/* Réglages de base de toutes les pages */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-creme);
+  color: var(--color-anthracite);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
