@@ -1,16 +1,141 @@
 {
+  "Metadata": {
+    "titre": "Novashade – Pergola's, knikarmschermen, rolluiken en screens op maat",
+    "description": "Plaatsing en herstelling van pergola's, knikarmschermen, rolluiken, screens, veranda's en vliegenramen in België. Meer dan 20 jaar ervaring."
+  },
   "Header": {
     "accueil": "Novashade – home",
     "navigation": "Hoofdnavigatie",
     "services": "Diensten",
-    "realisations": "Realisaties",
+    "inspirations": "Inspiratie",
     "apropos": "Over ons",
     "contact": "Contact",
     "devis": "Gratis offerte",
     "ouvrirMenu": "Menu openen",
     "fermerMenu": "Menu sluiten"
   },
-  "Test": {
-    "titre": "Hallo, dit is de Nederlandstalige versie van de Novashade-website."
+  "Hero": {
+    "surtitre": "Pergola's · Zonwering · Rolluiken · Screens · Veranda's",
+    "titre": "Buitenleven",
+    "titreAccent": "op maat",
+    "texte": "Plaatsing en herstelling van pergola's, knikarmschermen, rolluiken, screens, veranda's en vliegenramen, voor particulieren en professionals in België.",
+    "cta": "Gratis offerte aanvragen",
+    "ctaSecondaire": "Ontdek onze diensten",
+    "atout1": "+20 jaar ervaring",
+    "atout2": "100 % op maat",
+    "atout3": "Plaatsing en herstelling",
+    "alt": "Pergola met gouden doek boven een terras 's avonds"
+  },
+  "Services": {
+    "surtitre": "Onze diensten",
+    "titre": "Alles om uw buitenruimte te beschermen en te verfraaien",
+    "intro": "Elke oplossing kiezen we samen met u, wordt op maat gemaakt en door ons geplaatst.",
+    "pergolas": {
+      "titre": "Pergola's",
+      "texte": "Bioklimatisch met kantelbare lamellen of met doek, om het hele jaar van uw terras te genieten.",
+      "alt": "Bioklimatische pergola voor een moderne woning"
+    },
+    "storesBannes": {
+      "titre": "Knikarmschermen",
+      "texte": "Aangename schaduw op uw terras, met het doek van uw keuze, manueel of gemotoriseerd.",
+      "alt": "Uitgerold knikarmscherm boven een terras"
+    },
+    "volets": {
+      "titre": "Rolluiken",
+      "texte": "Isolatie, veiligheid en privacy. Plaatsing in nieuwbouw en renovatie, manueel of gemotoriseerd.",
+      "alt": "Antraciet rolluiken op een woning"
+    },
+    "screens": {
+      "titre": "Screens",
+      "texte": "Verticale doeken die warmte en licht filteren, terwijl u het zicht naar buiten behoudt.",
+      "alt": "Buitenscreens voor grote glaspartijen"
+    },
+    "verandas": {
+      "titre": "Veranda's",
+      "texte": "Een extra ruimte vol licht, ontworpen om perfect bij uw woning te passen.",
+      "alt": "Glazen veranda met eethoek"
+    },
+    "moustiquaires": {
+      "titre": "Vliegenramen",
+      "texte": "Voor ramen, deuren en dakramen: geniet van frisse lucht zonder insecten.",
+      "alt": "Plissé vliegenraam op een raam"
+    },
+    "reparation": {
+      "titre": "Herstelling en motorisatie",
+      "texte": "Rolluik geblokkeerd, riem gebroken, motor defect? Wij herstellen uw bestaande installaties en motoriseren uw rolluiken en zonwering met Somfy-motoren.",
+      "cta": "Een defect melden"
+    }
+  },
+  "APropos": {
+    "surtitre": "Over ons",
+    "titre": "Kwaliteit waarop u kunt vertrouwen",
+    "texte1": "Novashade staat voor meer dan 20 jaar ervaring in de rolluikensector: productie, plaatsing, herstelling en teamleiding. Die knowhow zetten we vandaag in voor uw volledige buitenruimte.",
+    "texte2": "Elk project wordt op maat besteld, pas nadat u uw bestelling hebt bevestigd. Geen stock, geen opgelegd model: u krijgt precies wat bij uw woning past.",
+    "chiffre1": "jaar ervaring",
+    "chiffre2": "productfamilies",
+    "chiffre3": "op maat",
+    "valeur1Titre": "Eén aanspreekpunt",
+    "valeur1Texte": "Dezelfde persoon adviseert u, neemt de maten en volgt de plaatsing van A tot Z op.",
+    "valeur2Titre": "Voor u besteld",
+    "valeur2Texte": "De materialen worden nieuw en op uw maten besteld, na uw akkoord.",
+    "valeur3Titre": "Particulieren en professionals",
+    "valeur3Texte": "Woningen, appartementen, winkels en kantoren: elk project telt."
+  },
+  "Methode": {
+    "surtitre": "Onze werkwijze",
+    "titre": "Uw project in 4 stappen",
+    "etape1Titre": "Contact",
+    "etape1Texte": "U beschrijft uw project telefonisch, per e-mail of via het formulier.",
+    "etape2Titre": "Bezoek en opmeting",
+    "etape2Texte": "We komen bij u langs om te adviseren, de exacte maten te nemen en de mogelijkheden te tonen.",
+    "etape3Titre": "Offerte en bestelling",
+    "etape3Texte": "U ontvangt een duidelijke offerte. Na akkoord en voorschot bestellen we uw producten op maat.",
+    "etape4Titre": "Plaatsing",
+    "etape4Texte": "Zorgvuldige plaatsing, afstelling, uitleg over het gebruik en een nette werf."
+  },
+  "Inspirations": {
+    "surtitre": "Inspiratie",
+    "titre": "Ideeën voor uw buitenruimte",
+    "intro": "Enkele voorbeelden van wat we bij u kunnen realiseren.",
+    "alt1": "Rood knikarmscherm boven een groot terras",
+    "alt2": "Witte pergola met doek op een terras",
+    "alt3": "Veranda met dak aan een rijwoning",
+    "alt4": "Eetkamer beschermd door een screen met zicht op de stad",
+    "alt5": "Glazen pergola boven een terras met bloemen",
+    "alt6": "Aluminium glazen veranda in een tuin",
+    "alt7": "Grote screen voor een moderne glaspartij",
+    "alt8": "Vliegenraam op een woonkamerraam",
+    "alt9": "Pergola met plat dak voor een woning met tuin"
+  },
+  "Contact": {
+    "surtitre": "Contact",
+    "titre": "Laten we over uw project praten",
+    "intro": "Beschrijf uw wens: we nemen snel contact met u op om een afspraak te maken.",
+    "telephone": "Telefoon",
+    "email": "E-mail",
+    "zone": "Werkgebied",
+    "zoneValeur": "België",
+    "tva": "Btw",
+    "formNom": "Naam en voornaam",
+    "formTelephone": "Telefoon",
+    "formEmail": "E-mail",
+    "formCommune": "Gemeente",
+    "formService": "Uw project",
+    "formServiceChoix": "Maak een keuze…",
+    "formReparation": "Herstelling of motorisatie",
+    "formAutre": "Andere vraag",
+    "formMessage": "Uw bericht",
+    "formMessageAide": "Geschatte afmetingen, type gevel, gewenste termijn…",
+    "formEnvoyer": "Mijn aanvraag versturen",
+    "formNote": "Bij het versturen opent uw e-mailprogramma met uw aanvraag al ingevuld.",
+    "formOuvert": "Uw e-mailprogramma is geopend met uw aanvraag. U hoeft ze enkel nog te versturen.",
+    "emailSujet": "Offerteaanvraag",
+    "emailBonjour": "Goedendag,"
+  },
+  "Footer": {
+    "slogan": "Buitenleven op maat. Kwaliteit waarop u kunt vertrouwen.",
+    "navigation": "Navigatie",
+    "coordonnees": "Contactgegevens",
+    "droits": "Alle rechten voorbehouden."
   }
 }

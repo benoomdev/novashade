@@ -8,7 +8,7 @@ import Logo from './Logo';
 
 const liens = [
   {cle: 'services', href: '#services'},
-  {cle: 'realisations', href: '#realisations'},
+  {cle: 'inspirations', href: '#inspirations'},
   {cle: 'apropos', href: '#a-propos'},
   {cle: 'contact', href: '#contact'}
 ] as const;

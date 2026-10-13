@@ -1,16 +1,141 @@
 {
+  "Metadata": {
+    "titre": "Novashade – Pergolas, stores, volets roulants et screens sur mesure",
+    "description": "Installation et réparation de pergolas, stores bannes, volets roulants, screens, vérandas et moustiquaires en Belgique. Plus de 20 ans d'expérience."
+  },
   "Header": {
     "accueil": "Novashade – accueil",
     "navigation": "Navigation principale",
     "services": "Services",
-    "realisations": "Réalisations",
+    "inspirations": "Inspirations",
     "apropos": "À propos",
     "contact": "Contact",
     "devis": "Devis gratuit",
     "ouvrirMenu": "Ouvrir le menu",
     "fermerMenu": "Fermer le menu"
   },
-  "Test": {
-    "titre": "Bonjour, ceci est la version française du site Novashade."
+  "Hero": {
+    "surtitre": "Pergolas · Stores · Volets · Screens · Vérandas",
+    "titre": "Votre extérieur",
+    "titreAccent": "sur mesure",
+    "texte": "Installation et réparation de pergolas, stores bannes, volets roulants, screens, vérandas et moustiquaires, pour particuliers et professionnels en Belgique.",
+    "cta": "Demander un devis gratuit",
+    "ctaSecondaire": "Découvrir nos services",
+    "atout1": "+20 ans d'expérience",
+    "atout2": "100 % sur mesure",
+    "atout3": "Installation et réparation",
+    "alt": "Pergola avec toile dorée au-dessus d'une terrasse en soirée"
+  },
+  "Services": {
+    "surtitre": "Nos services",
+    "titre": "Tout pour protéger et embellir votre extérieur",
+    "intro": "Chaque solution est choisie avec vous, fabriquée à vos mesures et posée par nos soins.",
+    "pergolas": {
+      "titre": "Pergolas",
+      "texte": "Bioclimatiques à lames orientables ou à toile, pour profiter de votre terrasse en toute saison.",
+      "alt": "Pergola bioclimatique devant une maison moderne"
+    },
+    "storesBannes": {
+      "titre": "Stores bannes",
+      "texte": "Une ombre agréable sur la terrasse, avec la toile de votre choix, en version manuelle ou motorisée.",
+      "alt": "Store banne déployé au-dessus d'une terrasse"
+    },
+    "volets": {
+      "titre": "Volets roulants",
+      "texte": "Isolation, sécurité et intimité. Pose en construction neuve comme en rénovation, manuels ou motorisés.",
+      "alt": "Volets roulants anthracite sur une maison"
+    },
+    "screens": {
+      "titre": "Screens",
+      "texte": "Des toiles verticales qui filtrent la chaleur et la lumière tout en gardant la vue sur l'extérieur.",
+      "alt": "Screens extérieurs sur de grandes baies vitrées"
+    },
+    "verandas": {
+      "titre": "Vérandas",
+      "texte": "Une pièce en plus, baignée de lumière, pensée pour s'intégrer parfaitement à votre maison.",
+      "alt": "Véranda vitrée avec salle à manger"
+    },
+    "moustiquaires": {
+      "titre": "Moustiquaires",
+      "texte": "Pour fenêtres, portes et fenêtres de toit : profitez de l'air frais sans les insectes.",
+      "alt": "Moustiquaire plissée sur une fenêtre"
+    },
+    "reparation": {
+      "titre": "Réparation et motorisation",
+      "texte": "Volet bloqué, sangle cassée, moteur en panne ? Nous réparons vos installations existantes et motorisons vos volets et stores avec des moteurs Somfy.",
+      "cta": "Signaler une panne"
+    }
+  },
+  "APropos": {
+    "surtitre": "À propos",
+    "titre": "La qualité, en toute confiance",
+    "texte1": "Novashade, c'est plus de 20 ans d'expérience dans le secteur des volets roulants : fabrication, placement, réparation et gestion d'équipe. Ce savoir-faire est aujourd'hui au service de tout votre extérieur.",
+    "texte2": "Chaque projet est commandé sur mesure, uniquement après la validation de votre commande. Pas de stock, pas de modèle imposé : vous recevez exactement ce qui convient à votre maison.",
+    "chiffre1": "ans d'expérience",
+    "chiffre2": "familles de produits",
+    "chiffre3": "sur mesure",
+    "valeur1Titre": "Un seul interlocuteur",
+    "valeur1Texte": "La même personne vous conseille, prend les mesures et suit la pose de A à Z.",
+    "valeur2Titre": "Commandé pour vous",
+    "valeur2Texte": "Les matériaux sont commandés neufs, à vos dimensions, après votre accord.",
+    "valeur3Titre": "Particuliers et professionnels",
+    "valeur3Texte": "Maisons, appartements, commerces et bureaux : chaque projet compte."
+  },
+  "Methode": {
+    "surtitre": "Notre méthode",
+    "titre": "Votre projet en 4 étapes",
+    "etape1Titre": "Prise de contact",
+    "etape1Texte": "Vous nous décrivez votre projet par téléphone, par e-mail ou via le formulaire.",
+    "etape2Titre": "Visite et mesures",
+    "etape2Texte": "Nous venons chez vous pour vous conseiller, prendre les mesures exactes et vous présenter les options.",
+    "etape3Titre": "Devis et commande",
+    "etape3Texte": "Vous recevez un devis clair. Après validation et acompte, nous commandons vos éléments sur mesure.",
+    "etape4Titre": "Installation",
+    "etape4Texte": "Pose soignée, réglages, explications d'utilisation et chantier laissé propre."
+  },
+  "Inspirations": {
+    "surtitre": "Inspirations",
+    "titre": "Des idées pour votre extérieur",
+    "intro": "Quelques exemples de ce que nous pouvons réaliser chez vous.",
+    "alt1": "Store banne rouge au-dessus d'une grande terrasse",
+    "alt2": "Pergola blanche à toile sur une terrasse",
+    "alt3": "Véranda avec toiture sur une maison mitoyenne",
+    "alt4": "Salle à manger protégée par un screen avec vue sur la ville",
+    "alt5": "Pergola en verre au-dessus d'une terrasse fleurie",
+    "alt6": "Véranda vitrée en aluminium dans un jardin",
+    "alt7": "Grand screen sur une baie vitrée moderne",
+    "alt8": "Moustiquaire sur une fenêtre de salon",
+    "alt9": "Pergola à toit plat devant une maison avec jardin"
+  },
+  "Contact": {
+    "surtitre": "Contact",
+    "titre": "Parlons de votre projet",
+    "intro": "Décrivez-nous votre besoin : nous vous recontactons rapidement pour fixer un rendez-vous.",
+    "telephone": "Téléphone",
+    "email": "E-mail",
+    "zone": "Zone d'intervention",
+    "zoneValeur": "Belgique",
+    "tva": "TVA",
+    "formNom": "Nom et prénom",
+    "formTelephone": "Téléphone",
+    "formEmail": "E-mail",
+    "formCommune": "Commune",
+    "formService": "Votre projet",
+    "formServiceChoix": "Choisissez…",
+    "formReparation": "Réparation ou motorisation",
+    "formAutre": "Autre demande",
+    "formMessage": "Votre message",
+    "formMessageAide": "Dimensions approximatives, type de façade, délai souhaité…",
+    "formEnvoyer": "Envoyer ma demande",
+    "formNote": "L'envoi ouvre votre messagerie avec votre demande déjà rédigée.",
+    "formOuvert": "Votre messagerie s'est ouverte avec votre demande. Il ne vous reste plus qu'à l'envoyer.",
+    "emailSujet": "Demande de devis",
+    "emailBonjour": "Bonjour,"
+  },
+  "Footer": {
+    "slogan": "Votre extérieur sur mesure. La qualité, en toute confiance.",
+    "navigation": "Navigation",
+    "coordonnees": "Coordonnées",
+    "droits": "Tous droits réservés."
   }
 }

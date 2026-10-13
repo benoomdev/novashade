@@ -2,16 +2,23 @@ import type {Metadata} from 'next';
 import {Jost} from 'next/font/google';
 import {notFound} from 'next/navigation';
 import {hasLocale, NextIntlClientProvider} from 'next-intl';
+import {getTranslations} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import '../globals.css';
 
 const jost = Jost({subsets: ['latin'], display: 'swap', variable: '--font-jost'});
 
-export const metadata: Metadata = {
-  title: 'Novashade',
-  description: 'Montage et réparation de volets, screens et pergolas en Belgique.'
-};
+export async function generateMetadata({params}: Omit<Props, 'children'>): Promise<Metadata> {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'Metadata'});
+
+  return {
+    title: t('titre'),
+    description: t('description')
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -34,6 +41,7 @@ export default async function LocaleLayout({children, params}: Props) {
         <NextIntlClientProvider>
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
