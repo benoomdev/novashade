@@ -1,51 +1,80 @@
-import Image from 'next/image';
+import type {StaticImageData} from 'next/image';
 import {useTranslations} from 'next-intl';
 import TitreSection from './TitreSection';
-import photo1 from '@/public/images/store-banne-rouge.jpg';
-import photo2 from '@/public/images/pergola-blanche.jpg';
-import photo3 from '@/public/images/veranda-toit.jpg';
-import photo4 from '@/public/images/screen-terrasse.jpg';
-import photo5 from '@/public/images/pergola-verre.jpg';
-import photo6 from '@/public/images/veranda-vitree.jpg';
-import photo7 from '@/public/images/screen-moderne.jpg';
-import photo8 from '@/public/images/moustiquaire-fenetre.jpg';
-import photo9 from '@/public/images/pergola-maison.jpg';
+import FiltreInspirations from './FiltreInspirations';
+import pergolaBioclimatique from '@/public/images/pergola-bioclimatique.jpg';
+import pergolaToile from '@/public/images/hero-pergola-toile.jpg';
+import pergolaBlanche from '@/public/images/pergola-blanche.jpg';
+import pergolaMaison from '@/public/images/pergola-maison.jpg';
+import storeBanne from '@/public/images/store-banne.jpg';
+import storeBanneRouge from '@/public/images/store-banne-rouge.jpg';
+import voletsRoulants from '@/public/images/volets-roulants.jpg';
+import voletsColoris from '@/public/images/volets-coloris.jpg';
+import voletAnthracite from '@/public/images/volet-roulant-anthracite.jpg';
+import screens from '@/public/images/screens.jpg';
+import screenModerne from '@/public/images/screen-moderne.jpg';
+import screensColoris from '@/public/images/screens-coloris.jpg';
+import screenTerrasse from '@/public/images/screen-terrasse.jpg';
+import veranda from '@/public/images/veranda.jpg';
+import verandaVitree from '@/public/images/veranda-vitree.jpg';
+import verandaToit from '@/public/images/veranda-toit.jpg';
+import verandaVerre from '@/public/images/pergola-verre.jpg';
+import verandaToitVerre from '@/public/images/veranda-toit-verre.jpg';
+import moustiquaire from '@/public/images/moustiquaire.jpg';
+import moustiquaireFenetre from '@/public/images/moustiquaire-fenetre.jpg';
+import moustiquaireToit from '@/public/images/moustiquaire-fenetre-toit.jpg';
+import moustiquaireToitNoire from '@/public/images/moustiquaire-fenetre-toit-noire.jpg';
 
-// Grille en mosaïque : certaines photos occupent deux colonnes ou deux lignes
-const photos = [
-  {photo: photo1, alt: 'alt1', classe: 'col-span-2 row-span-2'},
-  {photo: photo5, alt: 'alt5', classe: 'row-span-2'},
-  {photo: photo2, alt: 'alt2', classe: ''},
-  {photo: photo4, alt: 'alt4', classe: ''},
-  {photo: photo3, alt: 'alt3', classe: 'col-span-2'},
-  {photo: photo6, alt: 'alt6', classe: ''},
-  {photo: photo7, alt: 'alt7', classe: ''},
-  {photo: photo8, alt: 'alt8', classe: 'col-span-2'},
-  {photo: photo9, alt: 'alt9', classe: 'col-span-2'}
-] as const;
+// Mêmes catégories que la section Services
+const categories = ['pergolas', 'storesBannes', 'volets', 'screens', 'verandas', 'moustiquaires'] as const;
+type Categorie = (typeof categories)[number];
+
+const photos: {id: string; photo: StaticImageData; categorie: Categorie}[] = [
+  {id: 'pergolaBioclimatique', photo: pergolaBioclimatique, categorie: 'pergolas'},
+  {id: 'pergolaToile', photo: pergolaToile, categorie: 'pergolas'},
+  {id: 'pergolaBlanche', photo: pergolaBlanche, categorie: 'pergolas'},
+  {id: 'pergolaMaison', photo: pergolaMaison, categorie: 'pergolas'},
+  {id: 'storeBanne', photo: storeBanne, categorie: 'storesBannes'},
+  {id: 'storeBanneRouge', photo: storeBanneRouge, categorie: 'storesBannes'},
+  {id: 'voletsRoulants', photo: voletsRoulants, categorie: 'volets'},
+  {id: 'voletsColoris', photo: voletsColoris, categorie: 'volets'},
+  {id: 'voletAnthracite', photo: voletAnthracite, categorie: 'volets'},
+  {id: 'screens', photo: screens, categorie: 'screens'},
+  {id: 'screenModerne', photo: screenModerne, categorie: 'screens'},
+  {id: 'screensColoris', photo: screensColoris, categorie: 'screens'},
+  {id: 'screenTerrasse', photo: screenTerrasse, categorie: 'screens'},
+  {id: 'veranda', photo: veranda, categorie: 'verandas'},
+  {id: 'verandaVitree', photo: verandaVitree, categorie: 'verandas'},
+  {id: 'verandaToit', photo: verandaToit, categorie: 'verandas'},
+  {id: 'verandaVerre', photo: verandaVerre, categorie: 'verandas'},
+  {id: 'verandaToitVerre', photo: verandaToitVerre, categorie: 'verandas'},
+  {id: 'moustiquaire', photo: moustiquaire, categorie: 'moustiquaires'},
+  {id: 'moustiquaireFenetre', photo: moustiquaireFenetre, categorie: 'moustiquaires'},
+  {id: 'moustiquaireToit', photo: moustiquaireToit, categorie: 'moustiquaires'},
+  {id: 'moustiquaireToitNoire', photo: moustiquaireToitNoire, categorie: 'moustiquaires'}
+];
 
 export default function Inspirations() {
   const t = useTranslations('Inspirations');
+  const ts = useTranslations('Services');
 
   return (
     <section id="inspirations" className="scroll-mt-20 bg-carte py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <TitreSection surtitre={t('surtitre')} titre={t('titre')} intro={t('intro')} />
 
-        <ul className="mt-12 grid auto-rows-[160px] grid-cols-2 gap-3 sm:auto-rows-[200px] sm:gap-4 md:grid-cols-4">
-          {photos.map(({photo, alt, classe}) => (
-            <li key={alt} className={`group relative overflow-hidden rounded-xl ${classe}`}>
-              <Image
-                src={photo}
-                alt={t(alt)}
-                fill
-                placeholder="blur"
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </li>
-          ))}
-        </ul>
+        <FiltreInspirations
+          libelleFiltres={t('filtres')}
+          libelleTout={t('tout')}
+          categories={categories.map((cle) => ({cle, label: ts(`${cle}.titre`)}))}
+          photos={photos.map(({id, photo, categorie}) => ({
+            id,
+            photo,
+            categorie,
+            alt: t(`alts.${id}`),
+            label: ts(`${categorie}.titre`)
+          }))}
+        />
       </div>
     </section>
   );
