@@ -163,5 +163,8 @@
     "navigation": "Navigation",
     "coordonnees": "Coordonnées",
     "droits": "Tous droits réservés."
+  },
+  "BoutonAppel": {
+    "aria": "Appeler Novashade au {telephone}"
   }
 }

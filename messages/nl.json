@@ -163,5 +163,8 @@
     "navigation": "Navigatie",
     "coordonnees": "Contactgegevens",
     "droits": "Alle rechten voorbehouden."
+  },
+  "BoutonAppel": {
+    "aria": "Novashade bellen op {telephone}"
   }
 }

@@ -6,6 +6,7 @@ import {getTranslations} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BoutonAppel from './components/BoutonAppel';
 import '../globals.css';
 
 const jost = Jost({subsets: ['latin'], display: 'swap', variable: '--font-jost'});
@@ -42,6 +43,7 @@ export default async function LocaleLayout({children, params}: Props) {
           <Header />
           {children}
           <Footer />
+          <BoutonAppel />
         </NextIntlClientProvider>
       </body>
     </html>
