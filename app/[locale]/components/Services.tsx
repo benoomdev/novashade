@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import TitreSection from './TitreSection';
+import LienProjet from './LienProjet';
 import pergolas from '@/public/images/pergola-bioclimatique.jpg';
 import storesBannes from '@/public/images/store-banne.jpg';
 import volets from '@/public/images/volets-roulants.jpg';
@@ -58,12 +59,12 @@ export default function Services() {
             </h3>
             <p className="mt-3 leading-relaxed text-creme/75">{t('reparation.texte')}</p>
           </div>
-          <a
-            href="#contact"
+          <LienProjet
+            projet="reparation"
             className="shrink-0 rounded-full border border-or px-6 py-3 text-center font-medium text-or transition-colors hover:bg-or hover:text-noir"
           >
             {t('reparation.cta')}
-          </a>
+          </LienProjet>
         </div>
       </div>
     </section>

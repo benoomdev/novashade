@@ -3,6 +3,7 @@
 import {useEffect, useRef, useState} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
 import {site} from '@/site';
+import {EVENEMENT_PROJET} from './LienProjet';
 
 const cles = ['pergolas', 'storesBannes', 'volets', 'screens', 'verandas', 'moustiquaires'] as const;
 
@@ -17,7 +18,20 @@ export default function FormulaireContact() {
   const ts = useTranslations('Services');
   const locale = useLocale();
   const [etat, setEtat] = useState<Etat>('attente');
+  const [projet, setProjet] = useState('');
   const confirmation = useRef<HTMLDivElement>(null);
+
+  // Un lien « Signaler une panne » présélectionne la réparation (et rouvre le formulaire si besoin)
+  useEffect(() => {
+    const choisir = (e: Event) => {
+      if ((e as CustomEvent<string>).detail === 'reparation') {
+        setProjet(t('formReparation'));
+        setEtat((actuel) => (actuel === 'succes' ? 'attente' : actuel));
+      }
+    };
+    window.addEventListener(EVENEMENT_PROJET, choisir);
+    return () => window.removeEventListener(EVENEMENT_PROJET, choisir);
+  }, [t]);
 
   // La confirmation est plus courte que le formulaire : on la ramène à l'écran
   useEffect(() => {
@@ -40,6 +54,7 @@ export default function FormulaireContact() {
       });
       if (!reponse.ok) throw new Error(String(reponse.status));
       formulaire.reset();
+      setProjet('');
       setEtat('succes');
     } catch {
       setEtat('erreur');
@@ -96,7 +111,7 @@ export default function FormulaireContact() {
         </label>
         <label className="text-sm font-medium text-anthracite">
           {t('formService')}
-          <select name="service" required defaultValue="" className={champ}>
+          <select name="service" required value={projet} onChange={(e) => setProjet(e.target.value)} className={champ}>
             <option value="" disabled>
               {t('formServiceChoix')}
             </option>
