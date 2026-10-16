@@ -115,7 +115,6 @@
       "screenTerrasse": "Eetkamer met zicht op de stad, screen opgerold",
       "veranda": "Glazen veranda met eethoek",
       "verandaVitree": "Aluminium glazen veranda in een tuin",
-      "verandaToit": "Veranda met dak aan een rijwoning",
       "verandaVerre": "Glazen overkapping boven een terras met bloemen",
       "verandaToitVerre": "Glazen overkapping boven een houten terras",
       "moustiquaire": "Vliegenraam op een glaspartij",
@@ -126,7 +125,8 @@
       "pergolaPiscine": "Witte pergola van AlbertGenau aan een zwembad",
       "verandaVitrages": "Overkappingen van AlbertGenau: enkel glas, dubbel glas en kanaalplaten",
       "porteGarageSectionnelle": "Antraciet sectionale garagepoort in een bakstenen gevel",
-      "porteGarageEnroulable": "Antraciet oprolbare garagepoort in een bakstenen muur"
+      "porteGarageEnroulable": "Antraciet oprolbare garagepoort in een bakstenen muur",
+      "pergolaToit": "Pergola met dak op het terras van een rijwoning"
     }
   },
   "Contact": {

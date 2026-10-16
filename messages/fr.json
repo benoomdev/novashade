@@ -115,7 +115,6 @@
       "screenTerrasse": "Salle à manger avec vue sur la ville, screen relevé",
       "veranda": "Véranda vitrée avec salle à manger",
       "verandaVitree": "Véranda vitrée en aluminium dans un jardin",
-      "verandaToit": "Véranda avec toiture sur une maison mitoyenne",
       "verandaVerre": "Toiture en verre au-dessus d'une terrasse fleurie",
       "verandaToitVerre": "Toiture en verre au-dessus d'une terrasse en bois",
       "moustiquaire": "Moustiquaire sur une baie vitrée",
@@ -126,7 +125,8 @@
       "pergolaPiscine": "Pergola blanche AlbertGenau au bord d'une piscine",
       "verandaVitrages": "Toitures AlbertGenau : simple vitrage, double vitrage et plaques alvéolaires",
       "porteGarageSectionnelle": "Porte de garage sectionnelle anthracite dans une façade en brique",
-      "porteGarageEnroulable": "Porte de garage enroulable anthracite dans un mur en brique"
+      "porteGarageEnroulable": "Porte de garage enroulable anthracite dans un mur en brique",
+      "pergolaToit": "Pergola avec toiture sur la terrasse d'une maison mitoyenne"
     }
   },
   "Contact": {

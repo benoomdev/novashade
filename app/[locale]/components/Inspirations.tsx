@@ -6,6 +6,7 @@ import pergolaBioclimatique from '@/public/images/pergola-bioclimatique.jpg';
 import pergolaToile from '@/public/images/hero-pergola-toile.jpg';
 import pergolaBlanche from '@/public/images/pergola-blanche.jpg';
 import pergolaMaison from '@/public/images/pergola-maison.jpg';
+import pergolaToit from '@/public/images/pergola-toit.jpg';
 import storeBanne from '@/public/images/store-banne.jpg';
 import storeBanneRouge from '@/public/images/store-banne-rouge.jpg';
 import voletsRoulants from '@/public/images/volets-roulants.jpg';
@@ -17,7 +18,6 @@ import screensColoris from '@/public/images/screens-coloris.jpg';
 import screenTerrasse from '@/public/images/screen-terrasse.jpg';
 import veranda from '@/public/images/veranda.jpg';
 import verandaVitree from '@/public/images/veranda-vitree.jpg';
-import verandaToit from '@/public/images/veranda-toit.jpg';
 import verandaVerre from '@/public/images/pergola-verre.jpg';
 import verandaToitVerre from '@/public/images/veranda-toit-verre.jpg';
 import moustiquaire from '@/public/images/moustiquaire.jpg';
@@ -40,6 +40,7 @@ const photos: {id: string; photo: StaticImageData; categorie: Categorie; entier?
   {id: 'pergolaToile', photo: pergolaToile, categorie: 'pergolas'},
   {id: 'pergolaBlanche', photo: pergolaBlanche, categorie: 'pergolas'},
   {id: 'pergolaMaison', photo: pergolaMaison, categorie: 'pergolas'},
+  {id: 'pergolaToit', photo: pergolaToit, categorie: 'pergolas'},
   {id: 'pergolaAlbertGenau', photo: pergolaAlbertGenau, categorie: 'pergolas'},
   {id: 'pergolaPiscine', photo: pergolaPiscine, categorie: 'pergolas'},
   {id: 'storeBanne', photo: storeBanne, categorie: 'storesBannes'},
@@ -55,7 +56,6 @@ const photos: {id: string; photo: StaticImageData; categorie: Categorie; entier?
   {id: 'screenTerrasse', photo: screenTerrasse, categorie: 'screens'},
   {id: 'veranda', photo: veranda, categorie: 'verandas'},
   {id: 'verandaVitree', photo: verandaVitree, categorie: 'verandas'},
-  {id: 'verandaToit', photo: verandaToit, categorie: 'verandas'},
   {id: 'verandaVerre', photo: verandaVerre, categorie: 'verandas'},
   {id: 'verandaToitVerre', photo: verandaToitVerre, categorie: 'verandas'},
   {id: 'verandaVitrages', photo: verandaVitrages, categorie: 'verandas', entier: true},
