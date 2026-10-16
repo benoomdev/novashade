@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Formulaires Novashade</title>
+  </head>
+  <body>
+    <!--
+      Copie statique du formulaire de contact, lue par Netlify au déploiement
+      pour détecter le formulaire « contact ». Le vrai formulaire (FormulaireContact.tsx)
+      envoie ses données ici. Les noms des champs doivent rester identiques aux siens.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="langue" />
+      <input name="nom" />
+      <input name="telephone" type="tel" />
+      <input name="email" type="email" />
+      <input name="commune" />
+      <select name="service">
+        <option>Pergolas</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>

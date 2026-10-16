@@ -1,7 +1,7 @@
 'use client';
 
-import {useState} from 'react';
-import {useTranslations} from 'next-intl';
+import {useEffect, useRef, useState} from 'react';
+import {useLocale, useTranslations} from 'next-intl';
 import {site} from '@/site';
 
 const cles = ['pergolas', 'storesBannes', 'volets', 'screens', 'verandas', 'moustiquaires'] as const;
@@ -9,37 +9,74 @@ const cles = ['pergolas', 'storesBannes', 'volets', 'screens', 'verandas', 'mous
 const champ =
   'mt-2 w-full rounded-xl border border-bordure bg-creme px-4 py-3 text-anthracite outline-none transition-colors placeholder:text-gris/60 focus:border-or focus:ring-2 focus:ring-or/30';
 
-// Le formulaire prépare un e-mail dans la messagerie du visiteur (pas de serveur d'envoi)
+type Etat = 'attente' | 'envoi' | 'succes' | 'erreur';
+
+// Envoi via Netlify Forms : les données sont postées à la copie statique du formulaire (public/__forms.html)
 export default function FormulaireContact() {
   const t = useTranslations('Contact');
   const ts = useTranslations('Services');
-  const [ouvert, setOuvert] = useState(false);
+  const locale = useLocale();
+  const [etat, setEtat] = useState<Etat>('attente');
+  const confirmation = useRef<HTMLDivElement>(null);
 
-  function envoyer(e: React.FormEvent<HTMLFormElement>) {
+  // La confirmation est plus courte que le formulaire : on la ramène à l'écran
+  useEffect(() => {
+    if (etat === 'succes') confirmation.current?.scrollIntoView({behavior: 'smooth', block: 'center'});
+  }, [etat]);
+
+  async function envoyer(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const d = new FormData(e.currentTarget);
-    const v = (nom: string) => String(d.get(nom) ?? '').trim();
+    const formulaire = e.currentTarget;
+    setEtat('envoi');
 
-    const corps = [
-      t('emailBonjour'),
-      '',
-      v('message'),
-      '',
-      '—',
-      `${t('formService')} : ${v('service')}`,
-      `${t('formNom')} : ${v('nom')}`,
-      `${t('formTelephone')} : ${v('telephone')}`,
-      `${t('formEmail')} : ${v('email')}`,
-      `${t('formCommune')} : ${v('commune')}`
-    ].join('\n');
+    const donnees = new URLSearchParams();
+    new FormData(formulaire).forEach((valeur, cle) => donnees.append(cle, String(valeur)));
 
-    const sujet = `${t('emailSujet')} – ${v('service')} – ${v('nom')}`;
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
-    setOuvert(true);
+    try {
+      const reponse = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: donnees.toString()
+      });
+      if (!reponse.ok) throw new Error(String(reponse.status));
+      formulaire.reset();
+      setEtat('succes');
+    } catch {
+      setEtat('erreur');
+    }
+  }
+
+  if (etat === 'succes') {
+    return (
+      <div ref={confirmation} className="rounded-2xl border border-bordure bg-carte p-6 sm:p-8" role="status">
+        <span aria-hidden="true" className="fond-degrade-or flex h-12 w-12 items-center justify-center rounded-full text-xl text-noir">
+          ✓
+        </span>
+        <p className="mt-5 text-xl font-medium text-anthracite">{t('formSuccesTitre')}</p>
+        <p className="mt-2 text-gris">{t('formSuccesTexte')}</p>
+        <button
+          type="button"
+          onClick={() => setEtat('attente')}
+          className="mt-6 rounded-full border border-anthracite/25 px-6 py-3 font-medium text-anthracite transition-colors hover:border-or"
+        >
+          {t('formNouvelle')}
+        </button>
+      </div>
+    );
   }
 
   return (
-    <form onSubmit={envoyer} className="rounded-2xl border border-bordure bg-carte p-6 sm:p-8">
+    <form name="contact" onSubmit={envoyer} className="rounded-2xl border border-bordure bg-carte p-6 sm:p-8">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="langue" value={locale} />
+      {/* Champ piège invisible : rempli uniquement par les robots, Netlify écarte alors l'envoi */}
+      <p className="hidden" aria-hidden="true">
+        <label>
+          {t('formPiege')}
+          <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-medium text-anthracite sm:col-span-2">
           {t('formNom')}
@@ -84,12 +121,31 @@ export default function FormulaireContact() {
 
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-or px-7 py-3.5 font-medium text-noir transition-opacity hover:opacity-90 sm:w-auto"
+        disabled={etat === 'envoi'}
+        className="mt-6 w-full rounded-full bg-or px-7 py-3.5 font-medium text-noir transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60 sm:w-auto"
       >
-        {t('formEnvoyer')}
+        {etat === 'envoi' ? t('formEnvoi') : t('formEnvoyer')}
       </button>
-      <p className="mt-3 text-sm text-gris" aria-live="polite">
-        {ouvert ? t('formOuvert') : t('formNote')}
+
+      <p className={`mt-3 text-sm ${etat === 'erreur' ? 'text-red-700' : 'text-gris'}`} role={etat === 'erreur' ? 'alert' : undefined}>
+        {etat === 'erreur' ? (
+          t.rich('formErreur', {
+            telephone: site.telephone,
+            email: site.email,
+            tel: (morceaux) => (
+              <a href={site.telephoneLien} className="font-medium underline">
+                {morceaux}
+              </a>
+            ),
+            mail: (morceaux) => (
+              <a href={`mailto:${site.email}`} className="font-medium underline">
+                {morceaux}
+              </a>
+            )
+          })
+        ) : (
+          t('formNote')
+        )}
       </p>
     </form>
   );

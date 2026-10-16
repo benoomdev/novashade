@@ -150,10 +150,13 @@
     "formMessage": "Votre message",
     "formMessageAide": "Dimensions approximatives, type de façade, délai souhaité…",
     "formEnvoyer": "Envoyer ma demande",
-    "formNote": "L'envoi ouvre votre messagerie avec votre demande déjà rédigée.",
-    "formOuvert": "Votre messagerie s'est ouverte avec votre demande. Il ne vous reste plus qu'à l'envoyer.",
-    "emailSujet": "Demande de devis",
-    "emailBonjour": "Bonjour,"
+    "formNote": "Vos coordonnées servent uniquement à vous recontacter.",
+    "formEnvoi": "Envoi en cours…",
+    "formSuccesTitre": "Merci, votre demande est bien envoyée.",
+    "formSuccesTexte": "Nous vous recontactons rapidement.",
+    "formNouvelle": "Envoyer une autre demande",
+    "formErreur": "L'envoi n'a pas fonctionné. Réessayez, ou contactez-nous directement au <tel>{telephone}</tel> ou à <mail>{email}</mail>.",
+    "formPiege": "Ne pas remplir ce champ"
   },
   "Footer": {
     "slogan": "Votre extérieur sur mesure. La qualité, en toute confiance.",

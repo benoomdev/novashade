@@ -150,10 +150,13 @@
     "formMessage": "Uw bericht",
     "formMessageAide": "Geschatte afmetingen, type gevel, gewenste termijn…",
     "formEnvoyer": "Mijn aanvraag versturen",
-    "formNote": "Bij het versturen opent uw e-mailprogramma met uw aanvraag al ingevuld.",
-    "formOuvert": "Uw e-mailprogramma is geopend met uw aanvraag. U hoeft ze enkel nog te versturen.",
-    "emailSujet": "Offerteaanvraag",
-    "emailBonjour": "Goedendag,"
+    "formNote": "Uw gegevens worden enkel gebruikt om u te contacteren.",
+    "formEnvoi": "Bezig met versturen…",
+    "formSuccesTitre": "Bedankt, uw aanvraag is verstuurd.",
+    "formSuccesTexte": "We nemen snel contact met u op.",
+    "formNouvelle": "Nog een aanvraag versturen",
+    "formErreur": "Het versturen is mislukt. Probeer opnieuw, of contacteer ons rechtstreeks op <tel>{telephone}</tel> of via <mail>{email}</mail>.",
+    "formPiege": "Dit veld niet invullen"
   },
   "Footer": {
     "slogan": "Buitenleven op maat. Kwaliteit waarop u kunt vertrouwen.",
