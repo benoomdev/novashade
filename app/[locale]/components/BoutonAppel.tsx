@@ -1,15 +1,34 @@
+'use client';
+
+import {useEffect, useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {site} from '@/site';
 
+// Distance de défilement (en px) à partir de laquelle le bouton apparaît
+const SEUIL = 80;
+
 // Bouton d'appel flottant, uniquement sur mobile (sous le menu ouvert, qui est en z-50)
+// Masqué en haut de page, il apparaît dès que le visiteur commence à défiler
 export default function BoutonAppel() {
   const t = useTranslations('BoutonAppel');
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const surDefilement = () => setVisible(window.scrollY > SEUIL);
+    surDefilement();
+    window.addEventListener('scroll', surDefilement, {passive: true});
+    return () => window.removeEventListener('scroll', surDefilement);
+  }, []);
 
   return (
     <a
       href={site.telephoneLien}
       aria-label={t('aria', {telephone: site.telephone})}
-      className="fixed right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-or text-noir shadow-lg shadow-noir/25 ring-4 ring-creme/60 transition-transform active:scale-95 md:hidden"
+      aria-hidden={!visible}
+      tabIndex={visible ? undefined : -1}
+      className={`fixed right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-or text-noir shadow-lg shadow-noir/25 ring-4 ring-creme/60 transition-all duration-300 active:scale-95 md:hidden ${
+        visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
+      }`}
       style={{bottom: 'calc(1rem + env(safe-area-inset-bottom))'}}
     >
       <svg
