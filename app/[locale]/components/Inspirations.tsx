@@ -24,21 +24,31 @@ import moustiquaire from '@/public/images/moustiquaire.jpg';
 import moustiquaireFenetre from '@/public/images/moustiquaire-fenetre.jpg';
 import moustiquaireToit from '@/public/images/moustiquaire-fenetre-toit.jpg';
 import moustiquaireToitNoire from '@/public/images/moustiquaire-fenetre-toit-noire.jpg';
+import pergolaAlbertGenau from '@/public/images/pergola-albertgenau.jpg';
+import pergolaPiscine from '@/public/images/pergola-piscine.jpg';
+import verandaVitrages from '@/public/images/veranda-vitrages.jpg';
+import porteGarageSectionnelle from '@/public/images/porte-garage-sectionnelle.jpg';
+import porteGarageEnroulable from '@/public/images/porte-garage-enroulable.jpg';
 
 // Mêmes catégories que la section Services
 const categories = ['pergolas', 'storesBannes', 'volets', 'screens', 'verandas', 'moustiquaires'] as const;
 type Categorie = (typeof categories)[number];
 
-const photos: {id: string; photo: StaticImageData; categorie: Categorie}[] = [
+// entier : image affichée sans recadrage (fiche produit en hauteur)
+const photos: {id: string; photo: StaticImageData; categorie: Categorie; entier?: boolean}[] = [
   {id: 'pergolaBioclimatique', photo: pergolaBioclimatique, categorie: 'pergolas'},
   {id: 'pergolaToile', photo: pergolaToile, categorie: 'pergolas'},
   {id: 'pergolaBlanche', photo: pergolaBlanche, categorie: 'pergolas'},
   {id: 'pergolaMaison', photo: pergolaMaison, categorie: 'pergolas'},
+  {id: 'pergolaAlbertGenau', photo: pergolaAlbertGenau, categorie: 'pergolas'},
+  {id: 'pergolaPiscine', photo: pergolaPiscine, categorie: 'pergolas'},
   {id: 'storeBanne', photo: storeBanne, categorie: 'storesBannes'},
   {id: 'storeBanneRouge', photo: storeBanneRouge, categorie: 'storesBannes'},
   {id: 'voletsRoulants', photo: voletsRoulants, categorie: 'volets'},
   {id: 'voletsColoris', photo: voletsColoris, categorie: 'volets'},
   {id: 'voletAnthracite', photo: voletAnthracite, categorie: 'volets'},
+  {id: 'porteGarageEnroulable', photo: porteGarageEnroulable, categorie: 'volets'},
+  {id: 'porteGarageSectionnelle', photo: porteGarageSectionnelle, categorie: 'volets'},
   {id: 'screens', photo: screens, categorie: 'screens'},
   {id: 'screenModerne', photo: screenModerne, categorie: 'screens'},
   {id: 'screensColoris', photo: screensColoris, categorie: 'screens'},
@@ -48,6 +58,7 @@ const photos: {id: string; photo: StaticImageData; categorie: Categorie}[] = [
   {id: 'verandaToit', photo: verandaToit, categorie: 'verandas'},
   {id: 'verandaVerre', photo: verandaVerre, categorie: 'verandas'},
   {id: 'verandaToitVerre', photo: verandaToitVerre, categorie: 'verandas'},
+  {id: 'verandaVitrages', photo: verandaVitrages, categorie: 'verandas', entier: true},
   {id: 'moustiquaire', photo: moustiquaire, categorie: 'moustiquaires'},
   {id: 'moustiquaireFenetre', photo: moustiquaireFenetre, categorie: 'moustiquaires'},
   {id: 'moustiquaireToit', photo: moustiquaireToit, categorie: 'moustiquaires'},
@@ -67,10 +78,11 @@ export default function Inspirations() {
           libelleFiltres={t('filtres')}
           libelleTout={t('tout')}
           categories={categories.map((cle) => ({cle, label: ts(`${cle}.titre`)}))}
-          photos={photos.map(({id, photo, categorie}) => ({
+          photos={photos.map(({id, photo, categorie, entier}) => ({
             id,
             photo,
             categorie,
+            entier,
             alt: t(`alts.${id}`),
             label: ts(`${categorie}.titre`)
           }))}

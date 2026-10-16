@@ -7,7 +7,7 @@ type Props = {
   libelleFiltres: string;
   libelleTout: string;
   categories: {cle: string; label: string}[];
-  photos: {id: string; photo: StaticImageData; categorie: string; alt: string; label: string}[];
+  photos: {id: string; photo: StaticImageData; categorie: string; alt: string; label: string; entier?: boolean}[];
 };
 
 const TOUT = 'tout';
@@ -50,10 +50,10 @@ export default function FiltreInspirations({libelleFiltres, libelleTout, categor
 
       {/* La clé relance l'animation d'apparition à chaque changement de catégorie */}
       <ul key={active} className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-        {visibles.map(({id, photo, alt, label}, i) => (
+        {visibles.map(({id, photo, alt, label, entier}, i) => (
           <li
             key={id}
-            className="group relative aspect-[4/3] animate-apparition overflow-hidden rounded-xl"
+            className={`group relative aspect-[4/3] animate-apparition overflow-hidden rounded-xl ${entier ? 'border border-bordure bg-white' : ''}`}
             style={{animationDelay: `${Math.min(i, 8) * 50}ms`}}
           >
             <Image
@@ -62,7 +62,7 @@ export default function FiltreInspirations({libelleFiltres, libelleTout, categor
               fill
               placeholder="blur"
               sizes="(min-width: 1024px) 360px, 50vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className={`transition-transform duration-700 group-hover:scale-105 ${entier ? 'object-contain p-2' : 'object-cover'}`}
             />
             {active === TOUT && (
               <span className="absolute bottom-2 left-2 rounded-full bg-noir/70 px-2.5 py-1 text-[11px] sm:bottom-3 sm:left-3 sm:px-3 sm:text-xs font-medium text-creme backdrop-blur">

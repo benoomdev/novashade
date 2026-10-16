@@ -121,7 +121,12 @@
       "moustiquaire": "Moustiquaire sur une baie vitrée",
       "moustiquaireFenetre": "Moustiquaire sur une fenêtre de salon",
       "moustiquaireToit": "Moustiquaire plissée sur une fenêtre de toit",
-      "moustiquaireToitNoire": "Moustiquaire noire sur une fenêtre de toit dans un bureau"
+      "moustiquaireToitNoire": "Moustiquaire noire sur une fenêtre de toit dans un bureau",
+      "pergolaAlbertGenau": "Pergola bioclimatique AlbertGenau sur une terrasse moderne",
+      "pergolaPiscine": "Pergola blanche AlbertGenau au bord d'une piscine",
+      "verandaVitrages": "Toitures AlbertGenau : simple vitrage, double vitrage et plaques alvéolaires",
+      "porteGarageSectionnelle": "Porte de garage sectionnelle anthracite dans une façade en brique",
+      "porteGarageEnroulable": "Porte de garage enroulable anthracite dans un mur en brique"
     }
   },
   "Contact": {
