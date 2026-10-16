@@ -36,13 +36,13 @@ type Categorie = (typeof categories)[number];
 
 // entier : image affichée sans recadrage (fiche produit en hauteur)
 const photos: {id: string; photo: StaticImageData; categorie: Categorie; entier?: boolean}[] = [
+  {id: 'pergolaPiscine', photo: pergolaPiscine, categorie: 'pergolas'},
   {id: 'pergolaBioclimatique', photo: pergolaBioclimatique, categorie: 'pergolas'},
   {id: 'pergolaToile', photo: pergolaToile, categorie: 'pergolas'},
   {id: 'pergolaBlanche', photo: pergolaBlanche, categorie: 'pergolas'},
   {id: 'pergolaMaison', photo: pergolaMaison, categorie: 'pergolas'},
   {id: 'pergolaToit', photo: pergolaToit, categorie: 'pergolas'},
   {id: 'pergolaAlbertGenau', photo: pergolaAlbertGenau, categorie: 'pergolas'},
-  {id: 'pergolaPiscine', photo: pergolaPiscine, categorie: 'pergolas'},
   {id: 'storeBanne', photo: storeBanne, categorie: 'storesBannes'},
   {id: 'storeBanneRouge', photo: storeBanneRouge, categorie: 'storesBannes'},
   {id: 'voletsRoulants', photo: voletsRoulants, categorie: 'volets'},
