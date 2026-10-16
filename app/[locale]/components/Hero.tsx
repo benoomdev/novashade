@@ -25,7 +25,7 @@ export default function Hero() {
 
       <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-32 sm:px-6 md:pb-20">
         <div className="max-w-2xl">
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-or sm:text-sm">{t('surtitre')}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-or sm:text-sm lg:w-max">{t('surtitre')}</p>
           <h1 className="mt-5 text-5xl font-light leading-[1.05] text-creme sm:text-6xl lg:text-7xl">
             {t('titre')}
             <br />
