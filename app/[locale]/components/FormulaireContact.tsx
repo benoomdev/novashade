@@ -88,7 +88,7 @@ export default function FormulaireContact() {
         </label>
         <label className="text-sm font-medium text-anthracite">
           {t('formEmail')}
-          <input name="email" type="email" autoComplete="email" className={champ} />
+          <input name="email" type="email" required autoComplete="email" className={champ} />
         </label>
         <label className="text-sm font-medium text-anthracite">
           {t('formCommune')}
