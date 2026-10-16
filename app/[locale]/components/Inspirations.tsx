@@ -9,6 +9,7 @@ import pergolaMaison from '@/public/images/pergola-maison.jpg';
 import pergolaToit from '@/public/images/pergola-toit.jpg';
 import storeBanne from '@/public/images/store-banne.jpg';
 import storeBanneRouge from '@/public/images/store-banne-rouge.jpg';
+import storeBanneRougeTerrasse from '@/public/images/store-banne-rouge-terrasse.jpg';
 import voletsRoulants from '@/public/images/volets-roulants.jpg';
 import voletsColoris from '@/public/images/volets-coloris.jpg';
 import voletAnthracite from '@/public/images/volet-roulant-anthracite.jpg';
@@ -45,6 +46,7 @@ const photos: {id: string; photo: StaticImageData; categorie: Categorie; entier?
   {id: 'pergolaAlbertGenau', photo: pergolaAlbertGenau, categorie: 'pergolas'},
   {id: 'storeBanne', photo: storeBanne, categorie: 'storesBannes'},
   {id: 'storeBanneRouge', photo: storeBanneRouge, categorie: 'storesBannes'},
+  {id: 'storeBanneRougeTerrasse', photo: storeBanneRougeTerrasse, categorie: 'storesBannes'},
   {id: 'voletsRoulants', photo: voletsRoulants, categorie: 'volets'},
   {id: 'voletsColoris', photo: voletsColoris, categorie: 'volets'},
   {id: 'voletAnthracite', photo: voletAnthracite, categorie: 'volets'},
